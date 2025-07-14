@@ -1,69 +1,87 @@
-# React + TypeScript + Vite
+# carritoCompras
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una tienda virtual de guitarras desarrollada con React y TypeScript que permite agregar productos al carrito, modificar cantidades, eliminar items y vaciar el carrito. El estado del carrito se mantiene en `localStorage` para persistencia entre recargas.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Características
 
-## Expanding the ESLint configuration
+- Listado de guitarras con imagen, descripción y precio.
+- Añadir guitarras al carrito con control de cantidad mínima y máxima.
+- Incrementar y decrementar cantidad de productos en el carrito.
+- Eliminar productos individualmente.
+- Vaciar el carrito completo.
+- Persistencia automática usando `localStorage`.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Tecnologías
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- React 19+
+- TypeScript 5.8+
+- Vite 7+
+- Hooks personalizados (`useCart`)
+- CSS con clases Bootstrap (o similar)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## Instalación
+
+Clona el repositorio y accede a la carpeta:
+
+```bash
+git clone https://github.com/esotooo/carritoCompras.git
+cd carritoCompras
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Instala las dependencias:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+Ejecuta la aplicacion en modo desarrollo:
+
+```bash
+npm install
+```
+
+Abre en tu navegador la URL que muestra Vite, normalmente:
+
+```bash
+http://localhost:5173
+```
+
+## Estructura principal
+
+- `src/components` – Componentes `Header`, `Guitar`, `Footer`.
+- `src/hooks/useCart.ts` – Hook personalizado para manejar la lógica del carrito.
+- `src/data/db.ts` – Base de datos simulada con las guitarras.
+- `src/types/types.ts` – Definiciones de tipos TypeScript.
+- `src/App.tsx` – Componente raíz que renderiza la app y conecta el carrito.
+
+---
+
+## Uso
+
+- Navega la colección de guitarras.
+- Añade guitarras al carrito usando el botón “Agregar al Carrito”.
+- Controla las cantidades desde el carrito desplegable en el header.
+- Elimina productos o vacía todo el carrito con un botón dedicado.
+- El total a pagar se calcula automáticamente.
+
+---
+
+## Próximas mejoras
+
+- Integrar sistema de checkout y pagos.
+- Añadir filtros y búsqueda.
+- Mejorar diseño y responsividad.
+- Implementar autenticación de usuarios.
+
+---
+
+## Autor
+
+Edwin Soto – [https://github.com/esotooo](https://github.com/esotooo) – edwinsoto.developer@gmail.com
+
