@@ -1,4 +1,4 @@
-# carritoCompras
+# Carrito de Compras
 
 Una tienda virtual de guitarras desarrollada con React y TypeScript que permite agregar productos al carrito, modificar cantidades, eliminar items y vaciar el carrito. El estado del carrito se mantiene en `localStorage` para persistencia entre recargas.
 
@@ -43,7 +43,7 @@ npm install
 Ejecuta la aplicacion en modo desarrollo:
 
 ```bash
-npm install
+npm run dev
 ```
 
 Abre en tu navegador la URL que muestra Vite, normalmente:
@@ -51,6 +51,7 @@ Abre en tu navegador la URL que muestra Vite, normalmente:
 ```bash
 http://localhost:5173
 ```
+---
 
 ## Estructura principal
 
