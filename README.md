@@ -4,6 +4,12 @@ Una tienda virtual de guitarras desarrollada con React y TypeScript que permite 
 
 ---
 
+# Demo
+
+[https://guitarcartts.netlify.app](https://guitarcartts.netlify.app)
+
+---
+
 ## Características
 
 - Listado de guitarras con imagen, descripción y precio.
@@ -79,6 +85,19 @@ http://localhost:5173
 - Añadir filtros y búsqueda.
 - Mejorar diseño y responsividad.
 - Implementar autenticación de usuarios.
+
+---
+
+## Capturas de Pantalla
+
+1. **Página principal:** muestra la colección completa de guitarras disponibles para comprar.  
+![Página principal con productos](public/img/carritoCompras1.png)
+
+2. **Carrito vacío:** vista inicial del carrito cuando aún no se han agregado productos.  
+![Carrito vacío](public/img/carritoCompras2.png)
+
+3. **Carrito con productos:** muestra el carrito con items agregados, donde se puede modificar cantidad y ver el total en tiempo real.  
+![Carrito con productos y total](public/img/carritoCompras3.png)
 
 ---
 
