@@ -81,10 +81,7 @@ http://localhost:5173
 
 ## Próximas mejoras
 
-- Integrar sistema de checkout y pagos.
 - Añadir filtros y búsqueda.
-- Mejorar diseño y responsividad.
-- Implementar autenticación de usuarios.
 
 ---
 
